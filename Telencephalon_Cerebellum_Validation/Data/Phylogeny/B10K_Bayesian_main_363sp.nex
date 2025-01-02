@@ -1,0 +1,739 @@
+#NEXUS
+
+Begin taxa;
+	Dimensions ntax=363;
+	Taxlabels
+		Struthio_camelus
+		Casuarius_casuarius
+		Dromaius_novaehollandiae
+		Apteryx_haastii
+		Apteryx_owenii
+		Apteryx_australis
+		Apteryx_rowi
+		Rhea_americana
+		Rhea_pennata
+		Eudromia_elegans
+		Nothoprocta_perdicaria
+		Nothoprocta_ornata
+		Nothoprocta_pentlandii
+		Nothocercus_julius
+		Nothocercus_nigrocapillus
+		Tinamus_guttatus
+		Crypturellus_soui
+		Crypturellus_cinnamomeus
+		Crypturellus_undulatus
+		Chauna_torquata
+		Anseranas_semipalmata
+		Anser_cygnoid
+		Cairina_moschata
+		Asarcornis_scutulata
+		Anas_platyrhynchos
+		Anas_zonorhyncha
+		Alectura_lathami
+		Penelope_pileata
+		Numida_meleagris
+		Odontophorus_gujanensis
+		Colinus_virginianus
+		Callipepla_squamata
+		Gallus_gallus
+		Coturnix_japonica
+		Phasianus_colchicus
+		Meleagris_gallopavo
+		Tympanuchus_cupido
+		Phoenicopterus_ruber
+		Podiceps_cristatus
+		Podilymbus_podiceps
+		Mesitornis_unicolor
+		Pterocles_burchelli
+		Pterocles_gutturalis
+		Syrrhaptes_paradoxus
+		Alopecoenas_beccarii
+		Caloenas_nicobarica
+		Columbina_picui
+		Columba_livia
+		Patagioenas_fasciata
+		Tauraco_erythrolophus
+		Corythaeola_cristata
+		Corythaixoides_concolor
+		Lophotis_ruficrista
+		Ardeotis_kori
+		Chlamydotis_macqueenii
+		Geococcyx_californianus
+		Crotophaga_sulcirostris
+		Centropus_bengalensis
+		Centropus_unirufus
+		Cuculus_canorus
+		Ceuthmochares_aereus
+		Piaya_cayana
+		Opisthocomus_hoazin
+		Heliornis_fulica
+		Atlantisia_rogersi
+		Zapornia_atra
+		Psophia_crepitans
+		Aramus_guarauna
+		Balearica_regulorum
+		Grus_americana
+		Burhinus_bistriatus
+		Chionis_minor
+		Pluvianellus_socialis
+		Charadrius_alexandrinus
+		Charadrius_vociferus
+		Himantopus_himantopus
+		Ibidorhyncha_struthersii
+		Limosa_lapponica
+		Arenaria_interpres
+		Calidris_pugnax
+		Pedionomus_torquatus
+		Thinocorus_orbignyianus
+		Jacana_jacana
+		Nycticryphes_semicollaris
+		Rostratula_benghalensis
+		Turnix_velox
+		Dromas_ardeola
+		Glareola_pratincola
+		Rhinoptilus_africanus
+		Stercorarius_parasiticus
+		Cepphus_grylle
+		Alca_torda
+		Uria_aalge
+		Uria_lomvia
+		Phaetusa_simplex
+		Rynchops_niger
+		Rissa_tridactyla
+		Chroicocephalus_maculipennis
+		Larus_smithsonianus
+		Nyctiprogne_leucopyga
+		Antrostomus_carolinensis
+		Chordeiles_acutipennis
+		Steatornis_caripensis
+		Nyctibius_bracteatus
+		Nyctibius_grandis
+		Podargus_strigoides
+		Aegotheles_bennettii
+		Chaetura_pelagica
+		Hemiprocne_comata
+		Calypte_anna
+		Oreotrochilus_melanogaster
+		Phaethon_lepturus
+		Eurypyga_helias
+		Rhynochetos_jubatus
+		Gavia_stellata
+		Aptenodytes_forsteri
+		Pygoscelis_adeliae
+		Thalassarche_chlororhynchos
+		Fregetta_grallaria
+		Oceanites_oceanicus
+		Hydrobates_tethys
+		Fulmarus_glacialis
+		Calonectris_borealis
+		Pelecanoides_urinatrix
+		Ciconia_maguari
+		Mesembrinibis_cayennensis
+		Nipponia_nippon
+		Cochlearius_cochlearius
+		Egretta_garzetta
+		Balaeniceps_rex
+		Pelecanus_crispus
+		Scopus_umbretta
+		Fregata_magnificens
+		Sula_dactylatra
+		Anhinga_anhinga
+		Anhinga_rufa
+		Phalacrocorax_carbo
+		Phalacrocorax_pelagicus
+		Phalacrocorax_harrisi
+		Phalacrocorax_auritus
+		Phalacrocorax_brasilianus
+		Tyto_alba
+		Glaucidium_brasilianum
+		Ciccaba_nigrolineata
+		Strix_occidentalis
+		Cathartes_aura
+		Sagittarius_serpentarius
+		Pandion_haliaetus
+		Circaetus_pectoralis
+		Haliaeetus_albicilla
+		Haliaeetus_leucocephalus
+		Aquila_chrysaetos
+		Spizaetus_tyrannus
+		Colius_striatus
+		Urocolius_indicus
+		Leptosomus_discolor
+		Apaloderma_vittatum
+		Trogon_melanurus
+		Buceros_rhinoceros
+		Bucorvus_abyssinicus
+		Rhinopomastus_cyanomelas
+		Upupa_epops
+		Merops_nubicus
+		Brachypteracias_leptosomus
+		Eurystomus_gularis
+		Todus_mexicanus
+		Baryphthengus_martii
+		Ceyx_cyanopectus
+		Chloroceryle_aenea
+		Halcyon_senegalensis
+		Bucco_capensis
+		Galbula_dea
+		Picoides_pubescens
+		Indicator_maculatus
+		Psilopogon_haemacephalus
+		Tricholaema_leucomelas
+		Eubucco_bourcierii
+		Ramphastos_sulfuratus
+		Semnornis_frantzii
+		Cariama_cristata
+		Chunga_burmeisteri
+		Herpetotheres_cachinnans
+		Falco_cherrug
+		Falco_peregrinus
+		Nestor_notabilis
+		Eolophus_roseicapillus
+		Probosciger_aterrimus
+		Amazona_guildingii
+		Agapornis_roseicollis
+		Melopsittacus_undulatus
+		Acanthisitta_chloris
+		Neodrepanis_coruscans
+		Serilophus_lunatus
+		Sapayoa_aenigma
+		Pitta_sordida
+		Calyptomena_viridis
+		Smithornis_capensis
+		Rhegmatorhina_hoffmannsi
+		Sakesphorus_luctuosus
+		Grallaria_varia
+		Scytalopus_superciliaris
+		Formicarius_rufipectus
+		Sclerurus_mexicanus
+		Furnarius_figulus
+		Campylorhamphus_procurvoides
+		Xiphorhynchus_elegans
+		Lepidothrix_coronata
+		Manacus_manacus
+		Cephalopterus_ornatus
+		Pachyramphus_minor
+		Onychorhynchus_coronatus
+		Oxyruncus_cristatus
+		Piprites_chloris
+		Neopipo_cinnamomea
+		Tachuris_rubrigastra
+		Mionectes_macconnelli
+		Tyrannus_savana
+		Atrichornis_clamosus
+		Menura_novaehollandiae
+		Climacteris_rufus
+		Ptilonorhynchus_violaceus
+		Malurus_elegans
+		Dasyornis_broadbenti
+		Grantiella_picta
+		Origma_solitaria
+		Pardalotus_punctatus
+		Orthonyx_spaldingii
+		Pomatostomus_ruficeps
+		Ptilorrhoa_leucosticta
+		Edolisoma_coerulescens
+		Chaetorhynchus_papuensis
+		Rhipidura_dahli
+		Dicrurus_megarhynchus
+		Myiagra_hebetior
+		Struthidea_cinerea
+		Ifrita_kowaldi
+		Paradisaea_raggiana
+		Lanius_ludovicianus
+		Aphelocoma_coerulescens
+		Corvus_moneduloides
+		Corvus_brachyrhynchos
+		Corvus_cornix
+		Mohoua_ochrocephala
+		Machaerirhynchus_nigripectus
+		Gymnorhina_tibicen
+		Rhagologus_leucostigma
+		Dryoscopus_gambensis
+		Dyaphorophyia_castanea
+		Mystacornis_crossleyi
+		Daphoenositta_chrysoptera
+		Eulacestoma_nigropectus
+		Aleadryas_rufinucha
+		Falcunculus_frontatus
+		Pachycephala_philippinensis
+		Oriolus_oriolus
+		Oreocharis_arfaki
+		Pteruthius_melanotis
+		Erpornis_zantholeuca
+		Vireo_altiloquus
+		Cnemophilus_loriae
+		Melanocharis_versteri
+		Callaeas_wilsoni
+		Notiomystis_cincta
+		Drymodes_brunneopygia
+		Chaetops_frenatus
+		Picathartes_gymnocephalus
+		Anthoscopus_minutus
+		Poecile_atricapillus
+		Parus_major
+		Pseudopodoces_humilis
+		Alaudala_cheleensis
+		Panurus_biarmicus
+		Nicator_chloris
+		Sylvietta_virens
+		Cisticola_juncidis
+		Acrocephalus_arundinaceus
+		Hippolais_icterina
+		Locustella_ochotensis
+		Oxylabes_madagascariensis
+		Donacobius_atricapilla
+		Hirundo_rustica
+		Phylloscopus_trochilus
+		Rhadina_sibilatrix
+		Hylia_prasina
+		Aegithalos_caudatus
+		Erythrocercus_mccallii
+		Cettia_cetti
+		Horornis_vulcanius
+		Brachypodius_atriceps
+		Pycnonotus_jocosus
+		Sinosuthora_webbiana
+		Sylvia_atricapilla
+		Sylvia_borin
+		Sterrhoptilus_dennistouni
+		Zosterops_hypoxanthus
+		Zosterops_lateralis
+		Pomatorhinus_ruficollis
+		Illadopsis_cleaveri
+		Leiothrix_lutea
+		Bombycilla_garrulus
+		Phainopepla_nitens
+		Regulus_satrapa
+		Tichodroma_muraria
+		Sitta_europaea
+		Polioptila_caerulea
+		Thryothorus_ludovicianus
+		Certhia_brachydactyla
+		Certhia_familiaris
+		Elachura_formosa
+		Buphagus_erythrorhynchus
+		Toxostoma_redivivum
+		Rhabdornis_inornatus
+		Leucopsar_rothschildi
+		Sturnus_vulgaris
+		Cinclus_mexicanus
+		Catharus_fuscescens
+		Cercotrichas_coryphaeus
+		Copsychus_sechellarum
+		Erithacus_rubecula
+		Ficedula_albicollis
+		Oenanthe_oenanthe
+		Saxicola_maurus
+		Promerops_cafer
+		Dicaeum_eximium
+		Leptocoma_aspasia
+		Chloropsis_cyanopogon
+		Chloropsis_hardwickii
+		Irena_cyanogastra
+		Peucedramus_taeniatus
+		Urocynchramus_pylzowi
+		Ploceus_nigricollis
+		Vidua_chalybeata
+		Vidua_macroura
+		Lonchura_striata
+		Taeniopygia_guttata
+		Prunella_fulvescens
+		Prunella_himalayana
+		Passer_domesticus
+		Hypocryptadius_cinnamomeus
+		Motacilla_alba
+		Chlorodrepanis_virens
+		Hemignathus_wilsoni
+		Serinus_canaria
+		Loxia_curvirostra
+		Loxia_leucoptera
+		Rhodinocichla_rosea
+		Calcarius_ornatus
+		Emberiza_fucata
+		Pheucticus_melanocephalus
+		Cardinalis_cardinalis
+		Passerina_amoena
+		Nesospiza_acunhae
+		Geospiza_fortis
+		Sporophila_hypoxantha
+		Spizella_passerina
+		Melospiza_melodia
+		Junco_hyemalis
+		Zonotrichia_albicollis
+		Setophaga_coronata
+		Setophaga_kirtlandii
+		Agelaius_phoeniceus
+		Molothrus_ater
+		Quiscalus_mexicanus
+		;
+End;
+
+Begin trees;
+	Translate
+		1 Struthio_camelus,
+		2 Casuarius_casuarius,
+		3 Dromaius_novaehollandiae,
+		4 Apteryx_haastii,
+		5 Apteryx_owenii,
+		6 Apteryx_australis,
+		7 Apteryx_rowi,
+		8 Rhea_americana,
+		9 Rhea_pennata,
+		10 Eudromia_elegans,
+		11 Nothoprocta_perdicaria,
+		12 Nothoprocta_ornata,
+		13 Nothoprocta_pentlandii,
+		14 Nothocercus_julius,
+		15 Nothocercus_nigrocapillus,
+		16 Tinamus_guttatus,
+		17 Crypturellus_soui,
+		18 Crypturellus_cinnamomeus,
+		19 Crypturellus_undulatus,
+		20 Chauna_torquata,
+		21 Anseranas_semipalmata,
+		22 Anser_cygnoid,
+		23 Cairina_moschata,
+		24 Asarcornis_scutulata,
+		25 Anas_platyrhynchos,
+		26 Anas_zonorhyncha,
+		27 Alectura_lathami,
+		28 Penelope_pileata,
+		29 Numida_meleagris,
+		30 Odontophorus_gujanensis,
+		31 Colinus_virginianus,
+		32 Callipepla_squamata,
+		33 Gallus_gallus,
+		34 Coturnix_japonica,
+		35 Phasianus_colchicus,
+		36 Meleagris_gallopavo,
+		37 Tympanuchus_cupido,
+		38 Phoenicopterus_ruber,
+		39 Podiceps_cristatus,
+		40 Podilymbus_podiceps,
+		41 Mesitornis_unicolor,
+		42 Pterocles_burchelli,
+		43 Pterocles_gutturalis,
+		44 Syrrhaptes_paradoxus,
+		45 Alopecoenas_beccarii,
+		46 Caloenas_nicobarica,
+		47 Columbina_picui,
+		48 Columba_livia,
+		49 Patagioenas_fasciata,
+		50 Tauraco_erythrolophus,
+		51 Corythaeola_cristata,
+		52 Corythaixoides_concolor,
+		53 Lophotis_ruficrista,
+		54 Ardeotis_kori,
+		55 Chlamydotis_macqueenii,
+		56 Geococcyx_californianus,
+		57 Crotophaga_sulcirostris,
+		58 Centropus_bengalensis,
+		59 Centropus_unirufus,
+		60 Cuculus_canorus,
+		61 Ceuthmochares_aereus,
+		62 Piaya_cayana,
+		63 Opisthocomus_hoazin,
+		64 Heliornis_fulica,
+		65 Atlantisia_rogersi,
+		66 Zapornia_atra,
+		67 Psophia_crepitans,
+		68 Aramus_guarauna,
+		69 Balearica_regulorum,
+		70 Grus_americana,
+		71 Burhinus_bistriatus,
+		72 Chionis_minor,
+		73 Pluvianellus_socialis,
+		74 Charadrius_alexandrinus,
+		75 Charadrius_vociferus,
+		76 Himantopus_himantopus,
+		77 Ibidorhyncha_struthersii,
+		78 Limosa_lapponica,
+		79 Arenaria_interpres,
+		80 Calidris_pugnax,
+		81 Pedionomus_torquatus,
+		82 Thinocorus_orbignyianus,
+		83 Jacana_jacana,
+		84 Nycticryphes_semicollaris,
+		85 Rostratula_benghalensis,
+		86 Turnix_velox,
+		87 Dromas_ardeola,
+		88 Glareola_pratincola,
+		89 Rhinoptilus_africanus,
+		90 Stercorarius_parasiticus,
+		91 Cepphus_grylle,
+		92 Alca_torda,
+		93 Uria_aalge,
+		94 Uria_lomvia,
+		95 Phaetusa_simplex,
+		96 Rynchops_niger,
+		97 Rissa_tridactyla,
+		98 Chroicocephalus_maculipennis,
+		99 Larus_smithsonianus,
+		100 Nyctiprogne_leucopyga,
+		101 Antrostomus_carolinensis,
+		102 Chordeiles_acutipennis,
+		103 Steatornis_caripensis,
+		104 Nyctibius_bracteatus,
+		105 Nyctibius_grandis,
+		106 Podargus_strigoides,
+		107 Aegotheles_bennettii,
+		108 Chaetura_pelagica,
+		109 Hemiprocne_comata,
+		110 Calypte_anna,
+		111 Oreotrochilus_melanogaster,
+		112 Phaethon_lepturus,
+		113 Eurypyga_helias,
+		114 Rhynochetos_jubatus,
+		115 Gavia_stellata,
+		116 Aptenodytes_forsteri,
+		117 Pygoscelis_adeliae,
+		118 Thalassarche_chlororhynchos,
+		119 Fregetta_grallaria,
+		120 Oceanites_oceanicus,
+		121 Hydrobates_tethys,
+		122 Fulmarus_glacialis,
+		123 Calonectris_borealis,
+		124 Pelecanoides_urinatrix,
+		125 Ciconia_maguari,
+		126 Mesembrinibis_cayennensis,
+		127 Nipponia_nippon,
+		128 Cochlearius_cochlearius,
+		129 Egretta_garzetta,
+		130 Balaeniceps_rex,
+		131 Pelecanus_crispus,
+		132 Scopus_umbretta,
+		133 Fregata_magnificens,
+		134 Sula_dactylatra,
+		135 Anhinga_anhinga,
+		136 Anhinga_rufa,
+		137 Phalacrocorax_carbo,
+		138 Phalacrocorax_pelagicus,
+		139 Phalacrocorax_harrisi,
+		140 Phalacrocorax_auritus,
+		141 Phalacrocorax_brasilianus,
+		142 Tyto_alba,
+		143 Glaucidium_brasilianum,
+		144 Ciccaba_nigrolineata,
+		145 Strix_occidentalis,
+		146 Cathartes_aura,
+		147 Sagittarius_serpentarius,
+		148 Pandion_haliaetus,
+		149 Circaetus_pectoralis,
+		150 Haliaeetus_albicilla,
+		151 Haliaeetus_leucocephalus,
+		152 Aquila_chrysaetos,
+		153 Spizaetus_tyrannus,
+		154 Colius_striatus,
+		155 Urocolius_indicus,
+		156 Leptosomus_discolor,
+		157 Apaloderma_vittatum,
+		158 Trogon_melanurus,
+		159 Buceros_rhinoceros,
+		160 Bucorvus_abyssinicus,
+		161 Rhinopomastus_cyanomelas,
+		162 Upupa_epops,
+		163 Merops_nubicus,
+		164 Brachypteracias_leptosomus,
+		165 Eurystomus_gularis,
+		166 Todus_mexicanus,
+		167 Baryphthengus_martii,
+		168 Ceyx_cyanopectus,
+		169 Chloroceryle_aenea,
+		170 Halcyon_senegalensis,
+		171 Bucco_capensis,
+		172 Galbula_dea,
+		173 Picoides_pubescens,
+		174 Indicator_maculatus,
+		175 Psilopogon_haemacephalus,
+		176 Tricholaema_leucomelas,
+		177 Eubucco_bourcierii,
+		178 Ramphastos_sulfuratus,
+		179 Semnornis_frantzii,
+		180 Cariama_cristata,
+		181 Chunga_burmeisteri,
+		182 Herpetotheres_cachinnans,
+		183 Falco_cherrug,
+		184 Falco_peregrinus,
+		185 Nestor_notabilis,
+		186 Eolophus_roseicapillus,
+		187 Probosciger_aterrimus,
+		188 Amazona_guildingii,
+		189 Agapornis_roseicollis,
+		190 Melopsittacus_undulatus,
+		191 Acanthisitta_chloris,
+		192 Neodrepanis_coruscans,
+		193 Serilophus_lunatus,
+		194 Sapayoa_aenigma,
+		195 Pitta_sordida,
+		196 Calyptomena_viridis,
+		197 Smithornis_capensis,
+		198 Rhegmatorhina_hoffmannsi,
+		199 Sakesphorus_luctuosus,
+		200 Grallaria_varia,
+		201 Scytalopus_superciliaris,
+		202 Formicarius_rufipectus,
+		203 Sclerurus_mexicanus,
+		204 Furnarius_figulus,
+		205 Campylorhamphus_procurvoides,
+		206 Xiphorhynchus_elegans,
+		207 Lepidothrix_coronata,
+		208 Manacus_manacus,
+		209 Cephalopterus_ornatus,
+		210 Pachyramphus_minor,
+		211 Onychorhynchus_coronatus,
+		212 Oxyruncus_cristatus,
+		213 Piprites_chloris,
+		214 Neopipo_cinnamomea,
+		215 Tachuris_rubrigastra,
+		216 Mionectes_macconnelli,
+		217 Tyrannus_savana,
+		218 Atrichornis_clamosus,
+		219 Menura_novaehollandiae,
+		220 Climacteris_rufus,
+		221 Ptilonorhynchus_violaceus,
+		222 Malurus_elegans,
+		223 Dasyornis_broadbenti,
+		224 Grantiella_picta,
+		225 Origma_solitaria,
+		226 Pardalotus_punctatus,
+		227 Orthonyx_spaldingii,
+		228 Pomatostomus_ruficeps,
+		229 Ptilorrhoa_leucosticta,
+		230 Edolisoma_coerulescens,
+		231 Chaetorhynchus_papuensis,
+		232 Rhipidura_dahli,
+		233 Dicrurus_megarhynchus,
+		234 Myiagra_hebetior,
+		235 Struthidea_cinerea,
+		236 Ifrita_kowaldi,
+		237 Paradisaea_raggiana,
+		238 Lanius_ludovicianus,
+		239 Aphelocoma_coerulescens,
+		240 Corvus_moneduloides,
+		241 Corvus_brachyrhynchos,
+		242 Corvus_cornix,
+		243 Mohoua_ochrocephala,
+		244 Machaerirhynchus_nigripectus,
+		245 Gymnorhina_tibicen,
+		246 Rhagologus_leucostigma,
+		247 Dryoscopus_gambensis,
+		248 Dyaphorophyia_castanea,
+		249 Mystacornis_crossleyi,
+		250 Daphoenositta_chrysoptera,
+		251 Eulacestoma_nigropectus,
+		252 Aleadryas_rufinucha,
+		253 Falcunculus_frontatus,
+		254 Pachycephala_philippinensis,
+		255 Oriolus_oriolus,
+		256 Oreocharis_arfaki,
+		257 Pteruthius_melanotis,
+		258 Erpornis_zantholeuca,
+		259 Vireo_altiloquus,
+		260 Cnemophilus_loriae,
+		261 Melanocharis_versteri,
+		262 Callaeas_wilsoni,
+		263 Notiomystis_cincta,
+		264 Drymodes_brunneopygia,
+		265 Chaetops_frenatus,
+		266 Picathartes_gymnocephalus,
+		267 Anthoscopus_minutus,
+		268 Poecile_atricapillus,
+		269 Parus_major,
+		270 Pseudopodoces_humilis,
+		271 Alaudala_cheleensis,
+		272 Panurus_biarmicus,
+		273 Nicator_chloris,
+		274 Sylvietta_virens,
+		275 Cisticola_juncidis,
+		276 Acrocephalus_arundinaceus,
+		277 Hippolais_icterina,
+		278 Locustella_ochotensis,
+		279 Oxylabes_madagascariensis,
+		280 Donacobius_atricapilla,
+		281 Hirundo_rustica,
+		282 Phylloscopus_trochilus,
+		283 Rhadina_sibilatrix,
+		284 Hylia_prasina,
+		285 Aegithalos_caudatus,
+		286 Erythrocercus_mccallii,
+		287 Cettia_cetti,
+		288 Horornis_vulcanius,
+		289 Brachypodius_atriceps,
+		290 Pycnonotus_jocosus,
+		291 Sinosuthora_webbiana,
+		292 Sylvia_atricapilla,
+		293 Sylvia_borin,
+		294 Sterrhoptilus_dennistouni,
+		295 Zosterops_hypoxanthus,
+		296 Zosterops_lateralis,
+		297 Pomatorhinus_ruficollis,
+		298 Illadopsis_cleaveri,
+		299 Leiothrix_lutea,
+		300 Bombycilla_garrulus,
+		301 Phainopepla_nitens,
+		302 Regulus_satrapa,
+		303 Tichodroma_muraria,
+		304 Sitta_europaea,
+		305 Polioptila_caerulea,
+		306 Thryothorus_ludovicianus,
+		307 Certhia_brachydactyla,
+		308 Certhia_familiaris,
+		309 Elachura_formosa,
+		310 Buphagus_erythrorhynchus,
+		311 Toxostoma_redivivum,
+		312 Rhabdornis_inornatus,
+		313 Leucopsar_rothschildi,
+		314 Sturnus_vulgaris,
+		315 Cinclus_mexicanus,
+		316 Catharus_fuscescens,
+		317 Cercotrichas_coryphaeus,
+		318 Copsychus_sechellarum,
+		319 Erithacus_rubecula,
+		320 Ficedula_albicollis,
+		321 Oenanthe_oenanthe,
+		322 Saxicola_maurus,
+		323 Promerops_cafer,
+		324 Dicaeum_eximium,
+		325 Leptocoma_aspasia,
+		326 Chloropsis_cyanopogon,
+		327 Chloropsis_hardwickii,
+		328 Irena_cyanogastra,
+		329 Peucedramus_taeniatus,
+		330 Urocynchramus_pylzowi,
+		331 Ploceus_nigricollis,
+		332 Vidua_chalybeata,
+		333 Vidua_macroura,
+		334 Lonchura_striata,
+		335 Taeniopygia_guttata,
+		336 Prunella_fulvescens,
+		337 Prunella_himalayana,
+		338 Passer_domesticus,
+		339 Hypocryptadius_cinnamomeus,
+		340 Motacilla_alba,
+		341 Chlorodrepanis_virens,
+		342 Hemignathus_wilsoni,
+		343 Serinus_canaria,
+		344 Loxia_curvirostra,
+		345 Loxia_leucoptera,
+		346 Rhodinocichla_rosea,
+		347 Calcarius_ornatus,
+		348 Emberiza_fucata,
+		349 Pheucticus_melanocephalus,
+		350 Cardinalis_cardinalis,
+		351 Passerina_amoena,
+		352 Nesospiza_acunhae,
+		353 Geospiza_fortis,
+		354 Sporophila_hypoxantha,
+		355 Spizella_passerina,
+		356 Melospiza_melodia,
+		357 Junco_hyemalis,
+		358 Zonotrichia_albicollis,
+		359 Setophaga_coronata,
+		360 Setophaga_kirtlandii,
+		361 Agelaius_phoeniceus,
+		362 Molothrus_ater,
+		363 Quiscalus_mexicanus
+		;
+tree TREE1 = [&R] ((1[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:56.648,(((2[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:10.45667,3[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:10.45667)[&height_95%_HPD={7.2312900000000155,14.334300000000042}]:43.08035,((4[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:0.8743,5[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:0.8743)[&height_95%_HPD={0.8269300000000186,1.1742700000000355}]:1.76923,(6[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:0.99916,7[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:0.99916)[&height_95%_HPD={0.9251700000000227,1.3367900000000361}]:1.64437)[&height_95%_HPD={2.1768200000000206,3.409360000000035}]:50.89349)[&height_95%_HPD={43.94600000000001,62.397700000000036}]:0.71911,((8[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:4.46087,9[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:4.46087)[&height_95%_HPD={3.2299400000000134,6.017750000000035}]:48.77395,((10[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:32.40552,(11[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:10.71068,(12[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:1.37939,13[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:1.37939)[&height_95%_HPD={1.1760300000000115,1.8575700000000381}]:9.33129)[&height_95%_HPD={7.756920000000008,13.831900000000033}]:21.69484)[&height_95%_HPD={25.73900000000001,38.76470000000003}]:2.56516,((14[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:10.63634,15[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:10.63634)[&height_95%_HPD={7.649920000000009,14.061200000000042}]:20.12856,(16[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:25.37365,(17[&height_95%_HPD={5.6843418860808015E-14,0.2370000000000232}]:12.20373,(18[&height_95%_HPD={5.6843418860808015E-14,0.2370000000000232}]:4.56682,19[&height_95%_HPD={5.6843418860808015E-14,0.2370000000000232}]:4.56682)[&height_95%_HPD={3.3637700000000166,6.097890000000049}]:7.63691)[&height_95%_HPD={9.304540000000017,15.479300000000052}]:13.16992)[&height_95%_HPD={20.10160000000002,30.892200000000045}]:5.39125)[&height_95%_HPD={24.532200000000017,36.96190000000004}]:4.20578)[&height_95%_HPD={28.195000000000014,41.996600000000036}]:18.26414)[&height_95%_HPD={43.91810000000002,62.31360000000004}]:1.02131)[&height_95%_HPD={44.808900000000015,63.489900000000034}]:2.39187)[&height_95%_HPD={47.86660000000001,65.60760000000003}]:37.54217,(((20[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:46.55539,(21[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:41.82885,(22[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:19.88369,(23[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:8.18183,(24[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:6.85835,(25[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:1.97303,26[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:1.97303)[&height_95%_HPD={1.817840000000018,2.3870900000000432}]:4.88532)[&height_95%_HPD={5.989270000000019,7.970210000000037}]:1.32348)[&height_95%_HPD={7.2399400000000185,9.384720000000044}]:11.70186)[&height_95%_HPD={16.672200000000018,23.54190000000004}]:21.94516)[&height_95%_HPD={37.35700000000002,46.63320000000004}]:4.72654)[&height_95%_HPD={42.00100000000002,51.52860000000004}]:22.71314,(27[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:68.19645,(28[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:61.60291,(29[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:40.66427,((30[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.87546,(31[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:6.81342,32[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:6.81342)[&height_95%_HPD={5.709330000000023,8.148260000000022}]:10.06204)[&height_95%_HPD={14.454700000000017,19.574900000000028}]:21.24269,((33[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:26.72533,34[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:26.72533)[&height_95%_HPD={24.026300000000013,29.717500000000044}]:1.81226,(35[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:18.55938,(36[&height_95%_HPD={5.6843418860808015E-14,0.23700000000000898}]:16.54855,37[&height_95%_HPD={5.6843418860808015E-14,0.23700000000000898}]:16.54855)[&height_95%_HPD={14.20450000000001,19.320800000000048}]:2.01083)[&height_95%_HPD={16.15360000000001,21.36470000000004}]:9.97821)[&height_95%_HPD={25.894900000000014,31.692500000000038}]:9.58056)[&height_95%_HPD={34.99910000000001,41.49650000000003}]:2.54612)[&height_95%_HPD={37.43820000000001,44.146800000000034}]:20.93864)[&height_95%_HPD={58.632900000000014,64.69200000000004}]:6.59354)[&height_95%_HPD={65.45430000000002,71.12410000000004}]:1.07208)[&height_95%_HPD={67.23180000000002,71.67360000000004}]:20.30423,((38[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:54.2615,(39[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:12.89293,40[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:12.89293)[&height_95%_HPD={10.129400000000004,15.86860000000003}]:41.36857)[&height_95%_HPD={49.58300000000001,59.63280000000003}]:13.73443,((((41[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:63.49313,(42[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.12326,(43[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:14.39815,44[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:14.39815)[&height_95%_HPD={12.373700000000014,16.64170000000003}]:1.72511)[&height_95%_HPD={14.146100000000018,18.513100000000023}]:47.36987)[&height_95%_HPD={62.26150000000002,65.03610000000003}]:2.51385,((45[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000374}]:23.04825,46[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000374}]:23.04825)[&height_95%_HPD={20.675200000000032,25.74160000000002}]:1.11235,(47[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:23.46197,(48[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:14.12114,49[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:14.12114)[&height_95%_HPD={12.204000000000022,16.27500000000002}]:9.34083)[&height_95%_HPD={21.061900000000023,26.13030000000002}]:0.69863)[&height_95%_HPD={21.791900000000027,26.91580000000002}]:41.84638)[&height_95%_HPD={64.93100000000001,67.49740000000003}]:0.27366,((50[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.86519,(51[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:17.20751,52[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:17.20751)[&height_95%_HPD={14.500800000000012,20.159200000000027}]:8.65768)[&height_95%_HPD={22.668300000000016,29.440600000000032}]:39.84145,((53[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.1195,(54[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:13.44541,55[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:13.44541)[&height_95%_HPD={11.587800000000016,15.66700000000003}]:2.67409)[&height_95%_HPD={14.086600000000018,18.414600000000036}]:48.53042,((56[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:39.41405,57[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:39.41405)[&height_95%_HPD={36.42520000000002,42.61620000000003}]:9.87697,((58[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:9.91137,59[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:9.91137)[&height_95%_HPD={8.500630000000015,11.65800000000003}]:32.99696,(60[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:31.24276,(61[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:22.05903,62[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:22.05903)[&height_95%_HPD={19.60890000000002,24.824000000000026}]:9.18373)[&height_95%_HPD={28.69320000000002,34.07110000000003}]:11.66557)[&height_95%_HPD={40.40550000000002,45.55260000000003}]:6.38269)[&height_95%_HPD={46.90170000000002,52.00690000000003}]:15.3589)[&height_95%_HPD={63.530400000000014,66.07390000000004}]:1.05672)[&height_95%_HPD={64.58410000000002,67.12330000000003}]:0.574)[&height_95%_HPD={65.16780000000001,67.67400000000004}]:0.77061,(((63[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:65.21513,(((64[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:39.06825,(65[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.47665,66[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.47665)[&height_95%_HPD={13.245200000000025,20.039200000000037}]:22.5916)[&height_95%_HPD={34.793100000000024,43.61100000000003}]:15.86377,(67[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:50.64758,(68[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.0727,(69[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.13754,70[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.13754)[&height_95%_HPD={12.32510000000002,20.423300000000026}]:8.93516)[&height_95%_HPD={20.377200000000016,30.09940000000003}]:25.57488)[&height_95%_HPD={46.34930000000002,54.77640000000003}]:4.28444)[&height_95%_HPD={51.09650000000002,59.01790000000003}]:10.02833,(((71[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:44.38017,(72[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:11.99207,73[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:11.99207)[&height_95%_HPD={9.607320000000016,14.799800000000033}]:32.3881)[&height_95%_HPD={40.36550000000001,48.70020000000003}]:6.37172,((74[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:23.12668,75[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:23.12668)[&height_95%_HPD={18.596000000000018,28.061200000000028}]:8.06245,(76[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:19.16073,77[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:19.16073)[&height_95%_HPD={15.139200000000017,23.815900000000028}]:12.0284)[&height_95%_HPD={26.398800000000016,36.225900000000024}]:19.56276)[&height_95%_HPD={46.939000000000014,54.65610000000003}]:3.72148,(((78[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:26.21568,(79[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:16.94971,80[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:16.94971)[&height_95%_HPD={13.505900000000011,20.727900000000034}]:9.26597)[&height_95%_HPD={22.207600000000014,30.477000000000032}]:14.67564,((81[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.22698,82[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.22698)[&height_95%_HPD={22.022700000000015,28.81510000000003}]:8.87332,(83[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:28.78151,(84[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:18.46167,85[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:18.46167)[&height_95%_HPD={15.66980000000001,21.887900000000016}]:10.31984)[&height_95%_HPD={25.831100000000013,32.04080000000002}]:5.31879)[&height_95%_HPD={31.190700000000014,37.435700000000026}]:6.79102)[&height_95%_HPD={37.711700000000015,44.46230000000003}]:9.09773,(86[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:44.52227,((87[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:26.21987,(88[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:21.17248,89[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:21.17248)[&height_95%_HPD={17.908600000000007,24.79010000000001}]:5.04739)[&height_95%_HPD={22.925900000000013,29.905000000000015}]:5.28472,((90[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:20.99942,(91[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:13.2715,(92[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:9.82446,(93[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:3.85845,94[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:3.85845)[&height_95%_HPD={3.1724900000000247,4.910060000000016}]:5.96601)[&height_95%_HPD={8.18352000000003,11.704300000000018}]:3.44704)[&height_95%_HPD={11.449800000000025,15.444600000000023}]:7.72792)[&height_95%_HPD={18.58620000000002,23.739800000000017}]:1.48175,((95[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:16.36576,96[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:16.36576)[&height_95%_HPD={14.047300000000021,19.05580000000002}]:0.80399,(97[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:3.70754,(98[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:3.02042,99[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:3.02042)[&height_95%_HPD={2.595860000000016,3.727620000000016}]:0.68712)[&height_95%_HPD={3.232330000000019,4.448100000000011}]:13.46221)[&height_95%_HPD={14.804000000000016,19.831300000000013}]:5.31142)[&height_95%_HPD={20.059900000000013,25.326300000000018}]:9.02342)[&height_95%_HPD={28.12380000000001,35.25230000000002}]:13.01768)[&height_95%_HPD={40.79010000000001,48.286900000000024}]:5.46678)[&height_95%_HPD={46.53870000000001,53.87260000000003}]:4.48432)[&height_95%_HPD={50.805900000000015,58.44460000000003}]:10.48698)[&height_95%_HPD={63.845100000000016,66.36290000000002}]:0.25478)[&height_95%_HPD={63.901800000000016,67.23360000000002}]:0.59596,(((100[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:26.68308,(101[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:22.76478,102[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:22.76478)[&height_95%_HPD={17.489800000000017,29.181000000000026}]:3.9183)[&height_95%_HPD={21.05600000000001,33.001600000000025}]:37.56012,((103[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:62.29321,(104[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:22.01022,105[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:22.01022)[&height_95%_HPD={16.34060000000001,28.927400000000034}]:40.28299)[&height_95%_HPD={60.25700000000002,64.21120000000002}]:1.09682,(106[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:62.12848,(107[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:56.29506,((108[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:29.91651,109[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:29.91651)[&height_95%_HPD={24.54950000000001,35.73590000000004}]:18.74678,(110[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:17.36479,111[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:17.36479)[&height_95%_HPD={13.407700000000006,21.474100000000035}]:31.2985)[&height_95%_HPD={45.00380000000001,52.396600000000035}]:7.63177)[&height_95%_HPD={53.810400000000016,59.04890000000003}]:5.83342)[&height_95%_HPD={60.160800000000016,64.07290000000003}]:1.26155)[&height_95%_HPD={61.475400000000015,65.23910000000004}]:0.85317)[&height_95%_HPD={62.30770000000001,65.98820000000003}]:1.23804,((112[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:59.97453,(113[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:31.80542,114[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:31.80542)[&height_95%_HPD={24.943600000000018,38.78510000000003}]:28.16911)[&height_95%_HPD={58.59640000000002,61.751800000000024}]:3.22923,(115[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:60.42889,(((116[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.00143,117[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:16.00143)[&height_95%_HPD={13.296700000000016,19.042800000000028}]:41.55995,(118[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:50.504,((119[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:19.07491,120[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:19.07491)[&height_95%_HPD={14.313300000000012,24.39570000000002}]:29.66752,(121[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:46.62266,(122[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:23.57995,(123[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:21.90336,124[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:21.90336)[&height_95%_HPD={16.453800000000015,28.488800000000026}]:1.67659)[&height_95%_HPD={18.082700000000017,30.164300000000026}]:23.04271)[&height_95%_HPD={41.52410000000001,51.64480000000002}]:2.11977)[&height_95%_HPD={43.85770000000001,53.74760000000002}]:1.76157)[&height_95%_HPD={45.66530000000001,55.40610000000002}]:7.05738)[&height_95%_HPD={55.52710000000001,59.937800000000024}]:0.96855,(125[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:57.82828,(((126[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:29.25195,127[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:29.25195)[&height_95%_HPD={21.209900000000005,37.95820000000003}]:26.6315,((128[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:33.47814,129[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:33.47814)[&height_95%_HPD={26.53800000000001,39.28050000000003}]:21.49809,(130[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:42.32349,(131[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:41.27223,132[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:41.27223)[&height_95%_HPD={36.33300000000001,46.557500000000026}]:1.05126)[&height_95%_HPD={37.28460000000001,47.49660000000003}]:12.65274)[&height_95%_HPD={52.76150000000001,57.35810000000003}]:0.90722)[&height_95%_HPD={53.70470000000001,58.246500000000026}]:1.01606,(133[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:51.99968,(134[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:39.40259,((135[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:19.81104,136[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:19.81104)[&height_95%_HPD={15.640000000000015,24.669400000000024}]:15.66751,((137[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:5.92669,138[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:5.92669)[&height_95%_HPD={4.975500000000025,7.226270000000028}]:0.59807,(139[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:3.76206,(140[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:2.1917,141[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:2.1917)[&height_95%_HPD={1.7885100000000165,2.8462700000000325}]:1.57036)[&height_95%_HPD={3.1852900000000233,4.619420000000034}]:2.7627)[&height_95%_HPD={5.546000000000021,7.813410000000033}]:28.95379)[&height_95%_HPD={30.888900000000014,40.40560000000003}]:3.92404)[&height_95%_HPD={34.85440000000001,44.39340000000003}]:12.59709)[&height_95%_HPD={49.04450000000001,55.109900000000025}]:4.89983)[&height_95%_HPD={54.72960000000001,59.19820000000003}]:0.92877)[&height_95%_HPD={55.779100000000014,60.19880000000003}]:0.70165)[&height_95%_HPD={56.467100000000016,60.852600000000024}]:1.89896)[&height_95%_HPD={58.55380000000001,62.63480000000003}]:2.77487)[&height_95%_HPD={61.73060000000001,65.01640000000003}]:2.27748)[&height_95%_HPD={64.52900000000001,66.36040000000003}]:0.32985)[&height_95%_HPD={64.53310000000002,67.86670000000004}]:0.60618,((((142[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:55.69429,(143[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:17.36502,(144[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:2.39187,145[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:2.39187)[&height_95%_HPD={1.6472100000000154,3.1988300000000294}]:14.97315)[&height_95%_HPD={12.182400000000015,23.15590000000003}]:38.32927)[&height_95%_HPD={51.987400000000015,59.355100000000036}]:8.35335,(146[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:62.7386,(147[&height_95%_HPD={2.8421709430404007E-14,4.263256414560601E-14}]:52.30955,(148[&height=2.8421709430404007E-14]:32.46765,(149[&height_95%_HPD={2.8421709430404007E-14,4.263256414560601E-14}]:9.51727,((150[&height=4.263256414560601E-14]:0.50752,151[&height=4.263256414560601E-14]:0.50752)[&height_95%_HPD={0.35010000000004027,0.6735800000000438}]:8.10344,(152[&height=4.263256414560601E-14]:3.85955,153[&height=4.263256414560601E-14]:3.85955)[&height_95%_HPD={2.716270000000037,5.081740000000039}]:4.75141)[&height_95%_HPD={6.725410000000039,10.626300000000043}]:0.90631)[&height_95%_HPD={7.5943000000000325,11.603200000000044}]:22.95038)[&height_95%_HPD={19.529900000000026,47.07520000000004}]:19.8419)[&height_95%_HPD={36.78650000000002,59.53800000000004}]:10.42905)[&height_95%_HPD={61.43660000000001,64.20510000000004}]:1.30904)[&height_95%_HPD={62.93940000000002,65.30930000000004}]:0.2677,((154[&height_95%_HPD={1.4210854715202004E-14,4.263256414560601E-14}]:21.78112,155[&height_95%_HPD={1.4210854715202004E-14,4.263256414560601E-14}]:21.78112)[&height_95%_HPD={15.735700000000008,28.14200000000004}]:42.3906,(156[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:63.45598,((157[&height_95%_HPD={2.8421709430404007E-14,5.6843418860808015E-14}]:20.94924,158[&height_95%_HPD={2.8421709430404007E-14,5.6843418860808015E-14}]:20.94924)[&height_95%_HPD={15.138500000000022,27.29940000000005}]:41.90684,(((159[&height_95%_HPD={1.4210854715202004E-14,5.6843418860808015E-14}]:24.45508,160[&height_95%_HPD={1.4210854715202004E-14,5.6843418860808015E-14}]:24.45508)[&height_95%_HPD={17.812900000000013,31.36190000000005}]:31.09686,(161[&height_95%_HPD={1.4210854715202004E-14,4.263256414560601E-14}]:31.99696,162[&height_95%_HPD={1.4210854715202004E-14,4.263256414560601E-14}]:31.99696)[&height_95%_HPD={26.227400000000017,37.70240000000004}]:23.55498)[&height_95%_HPD={53.026800000000016,58.109200000000044}]:6.07473,(((163[&height_95%_HPD={1.4210854715202004E-14,4.263256414560601E-14}]:52.55476,(164[&height_95%_HPD={1.4210854715202004E-14,4.263256414560601E-14}]:36.50442,165[&height_95%_HPD={1.4210854715202004E-14,4.263256414560601E-14}]:36.50442)[&height_95%_HPD={29.755100000000013,42.76710000000004}]:16.05034)[&height_95%_HPD={49.84070000000001,55.16200000000004}]:1.95211,(166[&height_95%_HPD={0.0,4.263256414560601E-14}]:48.0933,(167[&height_95%_HPD={0.0,2.8421709430404007E-14}]:44.27574,(168[&height_95%_HPD={0.0,2.8421709430404007E-14}]:31.69814,(169[&height_95%_HPD={0.0,2.8421709430404007E-14}]:29.93766,170[&height_95%_HPD={0.0,2.8421709430404007E-14}]:29.93766)[&height_95%_HPD={25.213800000000006,34.55820000000003}]:1.76048)[&height_95%_HPD={27.11370000000001,36.42520000000003}]:12.5776)[&height_95%_HPD={40.62030000000001,47.79950000000004}]:3.81756)[&height_95%_HPD={44.63730000000001,51.35160000000004}]:6.41357)[&height_95%_HPD={51.89760000000001,56.95870000000004}]:5.51931,((171[&height_95%_HPD={0.0,4.263256414560601E-14}]:41.98644,172[&height_95%_HPD={0.0,4.263256414560601E-14}]:41.98644)[&height_95%_HPD={36.26350000000001,47.59950000000004}]:13.68345,((173[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:27.52291,174[&height_95%_HPD={1.4210854715202004E-14,2.8421709430404007E-14}]:27.52291)[&height_95%_HPD={22.436200000000014,32.63370000000003}]:11.0492,(175[&height_95%_HPD={0.0,2.8421709430404007E-14}]:28.43339,(176[&height_95%_HPD={0.0,2.8421709430404007E-14}]:25.9167,(177[&height_95%_HPD={0.0,2.8421709430404007E-14}]:14.74916,(178[&height_95%_HPD={0.0,4.263256414560601E-14}]:12.88209,179[&height_95%_HPD={0.0,4.263256414560601E-14}]:12.88209)[&height_95%_HPD={10.061700000000002,15.91730000000004}]:1.86707)[&height_95%_HPD={11.852900000000005,17.753600000000034}]:11.16754)[&height_95%_HPD={22.120400000000004,29.614100000000036}]:2.51669)[&height_95%_HPD={24.678600000000003,32.267300000000034}]:10.13872)[&height_95%_HPD={34.54130000000001,42.54250000000004}]:17.09778)[&height_95%_HPD={53.50120000000001,57.80580000000004}]:4.35629)[&height_95%_HPD={58.53650000000001,61.50660000000004}]:1.60049)[&height_95%_HPD={60.35430000000001,63.06400000000004}]:1.22941)[&height_95%_HPD={61.70630000000001,64.21840000000005}]:0.5999)[&height_95%_HPD={62.31620000000001,64.77160000000003}]:0.71574)[&height_95%_HPD={63.06880000000001,65.41300000000004}]:0.14362)[&height_95%_HPD={63.283000000000015,65.48290000000003}]:0.00175,((180[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:7.84491,181[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:7.84491)[&height_95%_HPD={6.291710000000009,9.746060000000028}]:55.78766,((182[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:32.33772,(183[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:1.23226,184[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:1.23226)[&height_95%_HPD={1.1936600000000226,1.5267500000000211}]:31.10546)[&height_95%_HPD={25.85030000000002,39.71210000000003}]:30.72395,((185[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:35.72298,((186[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:12.62671,187[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:12.62671)[&height_95%_HPD={10.026240000000016,15.525000000000034}]:15.24187,(188[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:23.73356,(189[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:18.73743,190[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:18.73743)[&height_95%_HPD={16.035100000000014,22.12680000000003}]:4.99613)[&height_95%_HPD={21.07380000000002,26.913900000000027}]:4.13502)[&height_95%_HPD={25.04340000000002,31.06770000000003}]:7.8544)[&height_95%_HPD={32.21160000000002,39.437000000000026}]:26.47865,(191[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:51.39638,((((192[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:22.1917,193[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:22.1917)[&height_95%_HPD={20.44110000000002,24.22740000000003}]:8.56026,((194[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:29.29766,195[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:29.29766)[&height_95%_HPD={27.327600000000018,31.541300000000035}]:0.79711,(196[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.48179,197[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.48179)[&height_95%_HPD={23.695000000000014,27.661800000000028}]:4.61298)[&height_95%_HPD={28.105600000000017,32.39600000000003}]:0.65719)[&height_95%_HPD={28.720100000000016,33.07490000000003}]:10.60648,(((198[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:11.88627,199[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:11.88627)[&height_95%_HPD={10.75030000000001,13.228000000000037}]:17.59963,(200[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:27.76399,(201[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:26.21967,(202[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:25.40293,(203[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:17.38075,(204[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:14.98696,(205[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:6.65379,206[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:6.65379)[&height_95%_HPD={6.127800000000008,7.425310000000039}]:8.33317)[&height_95%_HPD={13.942900000000009,16.339600000000033}]:2.39379)[&height_95%_HPD={16.215300000000013,18.876000000000033}]:8.02218)[&height_95%_HPD={23.745100000000015,27.27990000000004}]:0.81674)[&height_95%_HPD={24.470500000000015,28.096300000000042}]:1.54432)[&height_95%_HPD={25.942100000000018,29.735300000000038}]:1.72191)[&height_95%_HPD={27.582700000000017,31.58250000000004}]:6.94777,((207[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:6.0039,208[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:6.0039)[&height_95%_HPD={5.50933000000002,6.769540000000035}]:17.01561,(209[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:22.17644,(210[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:21.52883,((211[&height_95%_HPD={5.6843418860808015E-14,0.2370000000000232}]:20.21987,212[&height_95%_HPD={5.6843418860808015E-14,0.2370000000000232}]:20.21987)[&height_95%_HPD={18.86920000000002,21.82600000000005}]:0.92563,(213[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}height_range={4.263256414560601E-14,0.2370000000000232}]:19.27781,(214[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:18.27059,(215[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:17.91581,(216[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:17.17336,217[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:17.17336)[&height_95%_HPD={16.017800000000022,18.650400000000047}]:0.74245)[&height_95%_HPD={16.73520000000002,19.44300000000004}]:0.35478)[&height_95%_HPD={17.054300000000026,19.800700000000035}]:1.00722)[&height_95%_HPD={18.01800000000003,20.86890000000004}]:1.86769)[&height_95%_HPD={19.751200000000026,22.806100000000043}]:0.38333)[&height_95%_HPD={20.082000000000022,23.18570000000004}]:0.64761)[&height_95%_HPD={20.76640000000002,23.952700000000036}]:0.84307)[&height_95%_HPD={21.53570000000002,24.828100000000035}]:13.41416)[&height_95%_HPD={34.05960000000002,38.910300000000035}]:4.92477)[&height_95%_HPD={39.079000000000015,43.811800000000034}]:6.68234,((218[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:29.63652,219[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:29.63652)[&height_95%_HPD={25.67850000000002,33.54410000000003}]:11.25425,((220[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:33.66837,221[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:33.66837)[&height_95%_HPD={31.180100000000017,36.391200000000026}]:5.02197,((222[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:29.16592,(223[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:26.5541,(224[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.63393,(225[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:22.67978,226[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:22.67978)[&height_95%_HPD={20.716600000000014,25.001400000000032}]:2.95415)[&height_95%_HPD={23.679400000000015,27.942900000000037}]:0.92017)[&height_95%_HPD={24.517200000000017,28.811400000000035}]:2.61182)[&height_95%_HPD={27.16730000000002,31.46480000000004}]:4.87502,((227[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:29.55517,228[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:29.55517)[&height_95%_HPD={27.755600000000015,31.657100000000028}]:1.68198,((229[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:27.44935,(230[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:27.10092,(((231[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:17.99995,232[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:17.99995)[&height_95%_HPD={16.647600000000025,19.568000000000012}]:4.02938,(233[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:21.62534,(234[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:21.13669,((235[&height_95%_HPD={0.0,0.2370000000000232}]:20.60597,(236[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:20.0036,237[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:20.0036)[&height_95%_HPD={18.822700000000026,21.50670000000001}]:0.60237)[&height_95%_HPD={19.37760000000003,22.11670000000001}]:0.2192,(238[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:18.36004,(239[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:8.59527,(240[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:2.6511,(241[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:0.90254,242[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:0.90254)[&height_95%_HPD={0.9829500000000166,1.0651500000000311}]:1.74856)[&height_95%_HPD={2.4966400000000135,3.0527300000000253}]:5.94417)[&height_95%_HPD={7.63939000000002,9.793590000000023}]:9.76477)[&height_95%_HPD={17.187400000000025,19.853200000000015}]:2.46513)[&height_95%_HPD={19.563300000000027,22.335200000000015}]:0.31152)[&height_95%_HPD={19.88030000000002,22.687500000000014}]:0.48865)[&height_95%_HPD={20.37690000000002,23.242800000000017}]:0.40399)[&height_95%_HPD={20.699400000000026,23.616100000000017}]:4.26878,(243[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:26.10413,((244[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:20.47652,(245[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:20.02357,(246[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:19.2804,(247[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:18.01699,(248[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:17.07766,249[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:17.07766)[&height_95%_HPD={15.993800000000007,18.47410000000002}]:0.93933)[&height_95%_HPD={16.867500000000007,19.416000000000025}]:1.26341)[&height_95%_HPD={18.06750000000001,20.70390000000002}]:0.74317)[&height_95%_HPD={18.787200000000013,21.492400000000018}]:0.45295)[&height_95%_HPD={19.238900000000015,21.996200000000016}]:5.37324,(250[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.6064,(251[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:25.13734,((252[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:22.42343,253[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:22.42343)[&height_95%_HPD={21.09110000000001,24.01630000000003}]:2.32748,((254[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:23.21764,255[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:23.21764)[&height_95%_HPD={21.951200000000014,24.850000000000037}]:1.16736,(256[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:23.58077,(257[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:19.89238,(258[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:15.73347,259[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:15.73347)[&height_95%_HPD={14.482000000000014,17.284000000000034}]:4.15891)[&height_95%_HPD={18.57590000000002,21.459600000000037}]:3.68839)[&height_95%_HPD={22.316900000000018,25.215500000000034}]:0.80423)[&height_95%_HPD={23.06610000000002,26.039100000000033}]:0.36591)[&height_95%_HPD={23.431400000000018,26.449000000000026}]:0.38643)[&height_95%_HPD={23.782000000000018,26.84140000000002}]:0.46906)[&height_95%_HPD={24.27930000000002,27.39790000000002}]:0.24336)[&height_95%_HPD={24.46510000000002,27.612600000000015}]:0.25437)[&height_95%_HPD={24.69150000000002,27.865200000000016}]:0.19398)[&height_95%_HPD={24.87020000000002,28.066600000000022}]:0.80281)[&height_95%_HPD={25.656700000000015,28.941600000000022}]:0.34843)[&height_95%_HPD={26.00740000000002,29.184000000000026}]:2.68852,(260[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:28.41312,(261[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:27.89653,((262[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:24.17595,263[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:24.17595)[&height_95%_HPD={22.410900000000026,26.240000000000023}]:2.91285,((264[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:25.48882,(265[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000374}]:17.4,266[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000374}]:17.4)[&height_95%_HPD={15.173900000000032,19.89330000000001}]:8.08882)[&height_95%_HPD={23.803000000000026,27.366400000000013}]:0.99989,(((267[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:19.50035,(268[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:6.77504,(269[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:4.84566,270[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:4.84566)[&height_95%_HPD={4.627470000000017,5.336130000000011}]:1.92938)[&height_95%_HPD={6.4142200000000145,7.374250000000018}]:12.72531)[&height_95%_HPD={18.24500000000002,20.954900000000023}]:2.58109,((271[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:18.51142,272[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:18.51142)[&height_95%_HPD={17.415500000000023,19.843600000000023}]:1.55104,(273[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:19.75789,(274[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:19.11002,(275[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:18.52789,(((276[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:7.37012,277[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:7.37012)[&height_95%_HPD={6.845240000000018,8.130730000000028}]:10.57685,(278[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:16.12925,(279[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:15.57664,280[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:15.57664)[&height_95%_HPD={14.690700000000007,16.72140000000003}]:0.55261)[&height_95%_HPD={15.196400000000011,17.296900000000036}]:1.81772)[&height_95%_HPD={16.888700000000014,19.217600000000033}]:0.35368,(281[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:18.06325,(((282[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:8.20113,283[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:8.20113)[&height_95%_HPD={7.6523400000000095,8.995410000000035}]:8.30671,(284[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:15.95168,(285[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:15.42481,(286[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:14.30361,(287[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:9.48954,288[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:9.48954)[&height_95%_HPD={8.921060000000026,10.329000000000036}]:4.81407)[&height_95%_HPD={13.508100000000027,15.358700000000042}]:1.1212)[&height_95%_HPD={14.57810000000002,16.57100000000004}]:0.52687)[&height_95%_HPD={15.059100000000015,17.117500000000035}]:0.55616)[&height_95%_HPD={15.560000000000016,17.692400000000035}]:1.32928,((289[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:10.0074,290[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:10.0074)[&height_95%_HPD={9.384620000000012,10.955900000000042}]:7.19054,((291[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:13.11661,(292[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:5.92863,293[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:5.92863)[&height_95%_HPD={5.61678000000002,6.526700000000034}]:7.18798)[&height_95%_HPD={12.390400000000014,14.117600000000039}]:1.80917,((294[&height_95%_HPD={4.263256414560601E-14,0.23700000000000898}]:5.81805,(295[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:2.05804,296[&height_95%_HPD={4.263256414560601E-14,0.2370000000000232}]:2.05804)[&height_95%_HPD={2.0794300000000163,2.279780000000045}]:3.76001)[&height_95%_HPD={5.50885000000001,6.354810000000043}]:8.4402,(297[&height_95%_HPD={2.8421709430404007E-14,0.23699999999999477}]:13.60468,(298[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:12.71236,299[&height_95%_HPD={2.8421709430404007E-14,0.23700000000000898}]:12.71236)[&height_95%_HPD={12.000700000000009,13.650900000000036}]:0.89232)[&height_95%_HPD={12.846400000000003,14.606800000000035}]:0.65357)[&height_95%_HPD={13.467600000000004,15.315700000000035}]:0.66753)[&height_95%_HPD={14.077400000000011,16.01450000000004}]:2.27216)[&height_95%_HPD={16.195400000000006,18.423400000000044}]:0.63918)[&height_95%_HPD={16.84920000000001,19.160800000000037}]:0.22613)[&height_95%_HPD={17.05510000000001,19.396200000000036}]:0.2374)[&height_95%_HPD={17.214500000000015,19.589600000000033}]:0.22724)[&height_95%_HPD={17.451700000000017,19.858500000000035}]:0.58213)[&height_95%_HPD={18.008200000000016,20.49280000000003}]:0.64787)[&height_95%_HPD={18.60380000000002,21.180600000000027}]:0.30457)[&height_95%_HPD={18.914700000000025,21.531500000000023}]:2.01898)[&height_95%_HPD={20.930100000000024,23.55630000000002}]:0.77227,(((300[&height_95%_HPD={0.0,0.23700000000000898}]:14.27086,301[&height_95%_HPD={0.0,0.23700000000000898}]:14.27086)[&height_95%_HPD={13.161800000000014,15.650000000000006}]:7.7664,(302[&height_95%_HPD={0.0,0.23700000000000898}]:21.88835,((303[&height_95%_HPD={0.0,0.23700000000000898}]:19.59092,(304[&height_95%_HPD={0.0,0.23700000000000898}]:19.24507,((305[&height_95%_HPD={0.0,0.23700000000000898}]:13.36484,306[&height_95%_HPD={0.0,0.23700000000000898}]:13.36484)[&height_95%_HPD={12.478000000000009,14.521}]:4.65006,(307[&height_95%_HPD={0.0,0.23700000000000898}]:2.38359,308[&height_95%_HPD={0.0,0.23700000000000898}]:2.38359)[&height_95%_HPD={2.3268400000000042,2.6864999999999952}]:15.63131)[&height_95%_HPD={16.928600000000003,19.3176}]:1.23017)[&height_95%_HPD={18.154700000000005,20.694999999999993}]:0.34585)[&height_95%_HPD={18.450700000000012,21.030299999999997}]:1.97057,(309[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:20.87322,((310[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:11.91565,(311[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:11.49391,(312[&height_95%_HPD={0.0,0.2370000000000232}]:10.85699,(313[&height_95%_HPD={0.0,0.2370000000000232}]:3.97789,314[&height_95%_HPD={0.0,0.2370000000000232}]:3.97789)[&height_95%_HPD={3.734600000000029,4.456360000000004}]:6.8791)[&height_95%_HPD={10.118230000000025,11.819500000000005}]:0.63692)[&height_95%_HPD={10.745000000000019,12.528500000000008}]:0.42174)[&height_95%_HPD={11.104700000000022,12.937100000000015}]:5.04607,(315[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:16.48336,(316[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:15.36181,((317[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:7.37143,318[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:7.37143)[&height_95%_HPD={6.857510000000019,8.14334000000001}]:4.54619,(319[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:9.56718,(320[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:8.4364,(321[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:5.34791,322[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:5.34791)[&height_95%_HPD={5.02658000000001,5.917210000000011}]:3.08849)[&height_95%_HPD={7.961110000000005,9.191270000000017}]:1.13078)[&height_95%_HPD={9.01749000000001,10.38730000000001}]:2.35044)[&height_95%_HPD={11.224800000000016,12.882700000000014}]:3.44419)[&height_95%_HPD={14.414100000000019,16.50120000000001}]:1.12155)[&height_95%_HPD={15.478100000000026,17.711900000000014}]:0.47836)[&height_95%_HPD={15.933900000000023,18.234600000000015}]:3.9115)[&height_95%_HPD={19.692300000000017,22.40140000000001}]:0.68827)[&height_95%_HPD={20.305200000000013,23.103700000000003}]:0.32686)[&height_95%_HPD={20.58030000000001,23.423100000000005}]:0.14891)[&height_95%_HPD={20.757300000000015,23.55680000000001}]:0.45905,(323[&height_95%_HPD={0.0,0.2370000000000232}]:20.98065,((324[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:16.93206,325[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:16.93206)[&height_95%_HPD={15.686700000000016,18.452900000000014}]:3.83067,((326[&height_95%_HPD={0.0,0.2370000000000232}]:7.78588,327[&height_95%_HPD={0.0,0.2370000000000232}]:7.78588)[&height_95%_HPD={6.841720000000024,9.032840000000007}]:12.02134,(328[&height_95%_HPD={0.0,0.2370000000000232}]:19.49297,(329[&height_95%_HPD={0.0,0.2370000000000232}]:18.41434,((330[&height_95%_HPD={0.0,0.2370000000000232}]:16.81755,(331[&height_95%_HPD={0.0,0.2370000000000232}]:15.09817,((332[&height_95%_HPD={0.0,0.2370000000000232}]:2.30301,333[&height_95%_HPD={0.0,0.2370000000000232}]:2.30301)[&height_95%_HPD={2.167250000000024,2.6754999999999995}]:10.34561,(334[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:7.01858,335[&height_95%_HPD={1.4210854715202004E-14,0.23700000000000898}]:7.01858)[&height_95%_HPD={6.342450000000014,7.922840000000008}]:5.63004)[&height_95%_HPD={11.753100000000018,13.775300000000001}]:2.44955)[&height_95%_HPD={14.133200000000016,16.3493}]:1.71938)[&height_95%_HPD={15.714500000000015,18.096900000000005}]:0.57437,((336[&height_95%_HPD={0.0,0.23700000000000898}]:6.11691,337[&height_95%_HPD={0.0,0.23700000000000898}]:6.11691)[&height_95%_HPD={5.40852000000001,7.108130000000003}]:10.71539,((338[&height_95%_HPD={0.0,0.2370000000000232}]:13.35613,339[&height_95%_HPD={0.0,0.2370000000000232}]:13.35613)[&height_95%_HPD={12.44710000000002,14.535899999999998}]:2.31423,(340[&height_95%_HPD={0.0,0.2370000000000232}]:14.84502,(((341[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:1.48741,342[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:1.48741)[&height_95%_HPD={1.4857000000000227,1.7331200000000138}]:6.69943,(343[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:4.76357,(344[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000374}]:1.4113,345[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000374}]:1.4113)[&height_95%_HPD={1.4286000000000314,1.63797000000001}]:3.35227)[&height_95%_HPD={4.406240000000025,5.396160000000009}]:3.42327)[&height_95%_HPD={7.56404000000002,9.070550000000011}]:5.51465,(346[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:12.16231,((347[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:10.99025,348[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:10.99025)[&height_95%_HPD={10.344600000000028,11.938300000000012}]:0.60941,(((349[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:7.04917,(350[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000374}]:6.57147,351[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000374}]:6.57147)[&height_95%_HPD={6.091300000000032,7.267380000000017}]:0.4777)[&height_95%_HPD={6.563120000000026,7.787750000000017}]:2.5066,(352[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000374}]:8.17534,(353[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:7.60128,354[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:7.60128)[&height_95%_HPD={7.0961200000000275,8.329240000000013}]:0.57406)[&height_95%_HPD={7.663380000000032,8.957600000000014}]:1.38043)[&height_95%_HPD={8.985890000000026,10.40570000000001}]:1.65183,((355[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:8.09987,(356[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:6.1838,(357[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:3.67369,358[&height_95%_HPD={1.4210854715202004E-14,0.2370000000000232}]:3.67369)[&height_95%_HPD={3.4302800000000246,4.176630000000017}]:2.51011)[&height_95%_HPD={5.777530000000027,6.8292100000000175}]:1.91607)[&height_95%_HPD={7.581070000000025,8.844970000000018}]:2.30786,((359[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:3.46522,360[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:3.46522)[&height_95%_HPD={3.2026200000000244,3.9876400000000274}]:5.66652,(361[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:3.45843,(362[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:2.79506,363[&height_95%_HPD={2.8421709430404007E-14,0.2370000000000232}]:2.79506)[&height_95%_HPD={2.639130000000023,3.204090000000022}]:0.66337)[&height_95%_HPD={3.2623600000000295,3.9146100000000246}]:5.67331)[&height_95%_HPD={8.582950000000025,9.961790000000022}]:1.27599)[&height_95%_HPD={9.781500000000023,11.281800000000018}]:0.79987)[&height_95%_HPD={10.539400000000029,12.149400000000014}]:0.39206)[&height_95%_HPD={10.889900000000026,12.55810000000001}]:0.56265)[&height_95%_HPD={11.417600000000022,13.172500000000014}]:1.53918)[&height_95%_HPD={12.84350000000002,14.79870000000001}]:1.14353)[&height_95%_HPD={13.903800000000018,16.016500000000008}]:0.82534)[&height_95%_HPD={14.651600000000016,16.881100000000004}]:1.16194)[&height_95%_HPD={15.750500000000017,18.127800000000008}]:0.55962)[&height_95%_HPD={16.28060000000002,18.735200000000006}]:1.02242)[&height_95%_HPD={17.23600000000002,19.830600000000004}]:1.07863)[&height_95%_HPD={18.258000000000024,21.0004}]:0.31425)[&height_95%_HPD={18.55110000000002,21.335800000000006}]:0.95551)[&height_95%_HPD={19.451200000000014,22.36890000000001}]:0.21792)[&height_95%_HPD={19.731600000000014,22.574700000000007}]:1.51566)[&height_95%_HPD={20.757800000000017,24.304300000000012}]:0.3574)[&height_95%_HPD={21.15860000000002,24.720100000000016}]:3.635)[&height_95%_HPD={24.805900000000022,28.402000000000015}]:0.60009)[&height_95%_HPD={25.34220000000002,28.967700000000022}]:0.80773)[&height_95%_HPD={26.16820000000002,29.84480000000002}]:0.51659)[&height_95%_HPD={26.645600000000023,30.365400000000022}]:1.72475)[&height_95%_HPD={28.35740000000002,32.161700000000025}]:1.09928)[&height_95%_HPD={29.359900000000017,33.24410000000003}]:2.80379)[&height_95%_HPD={32.10800000000002,36.20320000000004}]:4.6494)[&height_95%_HPD={36.55710000000002,40.97830000000003}]:2.20043)[&height_95%_HPD={38.75530000000002,43.30700000000003}]:7.15001)[&height_95%_HPD={45.764400000000016,50.60070000000003}]:3.3556)[&height_95%_HPD={49.05940000000002,53.98610000000003}]:10.80525)[&height_95%_HPD={61.06690000000002,64.09440000000004}]:0.86004)[&height_95%_HPD={61.96650000000002,64.94200000000004}]:0.5709)[&height_95%_HPD={62.52820000000001,65.47870000000003}]:0.68452)[&height_95%_HPD={63.283000000000015,66.17850000000004}]:2.10018)[&height_95%_HPD={65.11170000000001,68.43550000000003}]:0.63398)[&height_95%_HPD={65.70940000000002,69.09960000000004}]:0.94468)[&height_95%_HPD={66.55440000000002,70.06200000000004}]:21.57683)[&height_95%_HPD={84.81650000000002,94.97160000000004}]:4.61741)[&height_95%_HPD={86.65710000000001,102.50700000000003}];
+End;

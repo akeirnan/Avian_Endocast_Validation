@@ -1,0 +1,186 @@
+---
+title: "TC_data_frames"
+author: "Aubrey Keirnan"
+date: "2023-05-12"
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+#Load packages
+```{r}
+library(nlme)
+library(png)
+library(ape)
+library(geiger)
+library(htmltools)
+library(ape)         # CRAN v5.5 
+library(geiger)      # CRAN v2.0.7
+library(rstudioapi)  # CRAN v0.13
+library(devtools)    # CRAN v2.4.3
+library(phytools)    # CRAN v0.7-90
+library(performance) # CRAN v0.8.0
+library(TreeTools)
+library(phytools)
+library(geiger)
+library(performance)
+library(car)
+
+#install_github("glmgen/genlasso", lib="C:/Program Files/R/R-4.3.3/library")
+#install_github("khabbazian/l1ou",lib="C:/Program Files/R/R-4.3.3/library")
+
+library(l1ou)        # [github::khabbazian/l1ou] v1.42
+library (evomap)    #0.0.0.9000
+```
+
+#Reading and processing raw data
+```{r}
+#Read data
+Data_raw <- read.csv(file="../Data/Raw/Data_raw.csv", header=TRUE)
+
+
+#Aggregating the roaws so that it is one line per species
+Data_raw <- cbind (aggregate(Data_raw[, c (4:9)], by = list(Data_raw$common_name), FUN = unique), aggregate(Data_raw[,c(10:17)],  by = list(Data_raw$common_name), FUN = mean, na.rm=TRUE, na.action=NULL))
+
+#Removing the random "Group.1" column that shows up
+Data_raw <- Data_raw [,-which(colnames(Data_raw)=="Group.1",),]
+
+#Converting all "NaN" to "NA" so they can be ignored (NaN means "not a number")
+Data_raw[Data_raw == "NaN"] <- NA
+
+#Give each row a unique name
+rownames(Data_raw) <- c(paste(substr(Data_raw$Genus,1,20),"_",substr(Data_raw$species,1,20), sep = ""))
+```
+
+#Calculating perentages and endo/brain remainder
+```{r}
+#Brain data
+brminustelenVOL=(Data_raw$brVOL_telen)-(Data_raw$telenVOL)
+brminuscereVOL=(Data_raw$brVOL_cere)-(Data_raw$cereVOL)
+telenPVOL=(Data_raw$telenVOL)/(Data_raw$brVOL_telen)
+cerePVOL=(Data_raw$cereVOL)/(Data_raw$brVOL_cere)
+#Endocast data
+enminustelenSA=(Data_raw$endoSA)-(Data_raw$telenSA)
+enminuscereSA=(Data_raw$endoSA)-(Data_raw$cereSA)
+telenPSA=(Data_raw$telenSA)/(Data_raw$endoSA)
+cerePSA=(Data_raw$cereSA)/(Data_raw$endoSA)
+
+#Binding these columns with Data_raw
+Data_raw <- cbind(Data_raw, brminustelenVOL, brminuscereVOL, telenPVOL, cerePVOL, enminustelenSA, enminuscereSA, telenPSA, cerePSA)
+
+
+```
+
+
+#Phylogeny built from families of Stiller et al. 2024 with other phylogenies added
+```{r}
+consensus_tree_telen <- compute.brlen(read.nexus("../Data/Phylogeny/Constructed_Tree.nex"))
+
+Phylo_Data_Telen <- Data_raw
+
+rownames(Phylo_Data_Telen) <- c(paste(substr(Data_raw$Genus,1,20),"_",substr(Data_raw$species,1,20), sep = ""))
+
+namecheck <- name.check(consensus_tree_telen, Phylo_Data_Telen)
+
+#At this stage, the species in the data are not in the same order as the species in the tree. Worth remembering and later reordering
+consensus_tree_telen$tip.label ==rownames(Phylo_Data_Telen)
+
+
+#This lets you find out which rows in a column have NAs
+which (is.na(Phylo_Data_Telen$telenVOL)==TRUE)
+
+
+#Phylo_Data_Telen <- Phylo_Data[, c (1:7, 9, )]
+
+#and this is how you remove them from the dataset. As you complete the dataset, they will go back in because then they're not NAs any more
+
+Phylo_Data_Telen <- Phylo_Data_Telen[-c(which (is.na(Phylo_Data_Telen$telenVOL)==TRUE)),]
+
+
+#To drop the tips in the tree corresponding to omitted rows, use name.check
+
+namecheck <- name.check(consensus_tree_telen, Phylo_Data_Telen)
+
+consensus_tree_telen <- drop.tip(consensus_tree_telen, namecheck$tree_not_data)
+
+
+#this should now not show anything; but note that the order is still wrong
+name.check(consensus_tree_telen, Phylo_Data_Telen)
+
+
+#making sure the species in the tree and dataset rows are in the same order - needs to all be TRUE
+consensus_tree_telen$tip.label ==rownames(Phylo_Data_Telen)
+
+
+
+#reorder the dataset so it is in the same order as the tips. the match () command allows you to find out at which position of dataset 2 a value in dataset 1 is (e.g. 72nd value of Phylo_data = 1st value of tree tips)
+match( consensus_tree_telen$tip.label, rownames(Phylo_Data_Telen) )
+
+Phylo_Data_Telen <- Phylo_Data_Telen[match( consensus_tree_telen$tip.label, rownames(Phylo_Data_Telen) ),]
+
+#check again
+consensus_tree_telen$tip.label ==rownames(Phylo_Data_Telen)
+
+
+
+
+#Repeat for cerebellum
+
+Phylo_Data_Cere <- Data_raw
+
+consensus_tree_cere <- compute.brlen(read.nexus("../Data/Phylogeny/Constructed_Tree.nex"))
+
+
+Phylo_Data_Cere <- Phylo_Data_Cere[-c(which (is.na(Phylo_Data_Cere$cereVOL)==TRUE)),]
+namecheck <- name.check(consensus_tree_cere, Phylo_Data_Cere)
+
+consensus_tree_cere <- drop.tip(consensus_tree_cere, namecheck$tree_not_data)
+name.check(consensus_tree_cere, Phylo_Data_Cere)
+consensus_tree_cere$tip.label ==rownames(Phylo_Data_Cere)
+
+
+
+match( consensus_tree_cere$tip.label, rownames(Phylo_Data_Cere) )
+
+Phylo_Data_Cere <- Phylo_Data_Cere[match( consensus_tree_cere$tip.label, rownames(Phylo_Data_Cere) ),]
+
+#check again
+consensus_tree_cere$tip.label ==rownames(Phylo_Data_Cere)
+
+
+write.nexus(consensus_tree_telen, file = "../Data/Phylogeny/Consensus_tree_telen.nex")
+write.nexus(consensus_tree_cere, file = "../Data/Phylogeny/Consensus_tree_cere.nex")
+
+```
+
+
+#Save the processed data
+```{r}
+save(Data_raw, consensus_tree_telen, consensus_tree_cere, Phylo_Data_Telen, Phylo_Data_Cere, file = "../Data/Processed/TeleCere_data_processed.rda")
+```
+
+
+#Phylogenetic confidence & prediction intervals from Evomap package
+```{r}
+
+###
+TeleEndo_gm_CI <- gls.ci(log (Phylo_Data_Telen$telenSA), log (Phylo_Data_Telen$enminustelenSA), vcv(consensus_tree_telen))
+
+###
+TeleBrain_gm_CI <- gls.ci(log (Phylo_Data_Telen$telenVOL), log (Phylo_Data_Telen$brminustelenVOL),vcv(consensus_tree_telen))
+
+###
+CereEndo_gm_CI <- gls.ci(log (Phylo_Data_Cere$cereSA), log (Phylo_Data_Cere$enminuscereSA),vcv(consensus_tree_cere))
+
+###
+CereBrain_gm_CI <- gls.ci(log (Phylo_Data_Cere$cereVOL), log (Phylo_Data_Cere$brminuscereVOL),vcv(consensus_tree_cere))
+
+
+save(TeleEndo_gm_CI, CereEndo_gm_CI, TeleBrain_gm_CI, CereBrain_gm_CI, file="../Data/Processed/phylo_confidence_intervals.rda")
+```
+
+
+
+
+
+
+

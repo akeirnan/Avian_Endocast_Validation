@@ -1,0 +1,55 @@
+---
+title: "Endomaker"
+author: "Vera Weisbecker"
+date: '2022-08-31'
+output: html_document
+---
+```{r setup of libraries}
+#this sets the directory to the source directory without having to manually click your way there
+library(rstudioapi) # Safely Access the RStudio API
+setwd(dirname(getActiveDocumentContext()$path))
+
+library(Arothron)
+library(geomorph)
+library(molaR)
+
+
+```
+`######Endomaker code
+
+```{r}
+
+filelist <- list.files(path= "../Data/Skull_Mesh/", pattern = "*.ply") #Creates filelist
+
+
+names <- gsub (".ply", "", filelist) # extracts names of specimens from the file name
+
+filelist <- paste("../Data/Skull_Mesh/", filelist, sep="") # rename with path
+
+Volumes <- vector()
+
+for (i in c(1:length(filelist))){
+  
+#Meshes take a lot of memory, so discard in the end and keep only temporary
+  temp_mesh <- read.ply(filelist[i])
+  
+  temp_endo <- endomaker(temp_mesh, decmesh = 20000)
+  
+  Volumes[i] <- temp_endo$volume
+  
+  open3d()
+  shade3d(temp_endo$endocast, col = "pink")
+  
+  writePLY(paste("../Data/Endocasts/", names[i], "_endomaker.ply", sep = ""), format = "little_endian")
+  
+  
+  
+remove(temp_mesh)
+remove (temp_endo)
+
+   }
+
+names(Volumes) <- names
+
+
+```

@@ -1,0 +1,468 @@
+---
+title: "TC_Analysis"
+author: "Aubrey Keirnan"
+date: "2023-09-12"
+output: html_document
+editor_options:
+  chunk_output_type: console
+---
+
+
+# load libraries required
+```{r}
+library(htmltools)
+library(ape)         
+library(nlme)       
+library(geiger)      
+library(rstudioapi)  
+library(devtools)    
+library(phytools)    
+library(performance) 
+library(TreeTools)
+library(phytools)
+library(geiger)
+library(performance)
+library(car)
+library(caper)
+
+#install_github("glmgen/genlasso")
+#install_github("khabbazian/l1ou")
+
+#Note that for my installations, I have to specify the path to the library on C:/
+
+#install_github("JeroenSmaers/evomap", lib = "C:/Program Files/R/R-4.0.4/library" )
+#install_github("khabbazian/l1ou", lib = "C:/Program Files/R/R-4.0.4/library" )
+
+library(l1ou)        # [github::khabbazian/l1ou] v1.42
+library (evomap)    #0.0.0.9000
+
+#this sets the working directory to the home path, which doesn't happen on everyone's computers
+setwd(dirname(getActiveDocumentContext()$path))
+
+load(file = "../Data/Processed/TeleCere_data_processed.rda")
+load(file="../Data/Processed/phylo_confidence_intervals.rda")
+
+```
+
+#PGLS analyses
+```{r}
+#to avoid warning messages, make a column that allows the "form" argument to be read in so it is 100% sure that the tree and the data talk to each other in terms of species order
+
+Phylo_Data_Telen$Tree_label_name <- rownames(Phylo_Data_Telen)
+Phylo_Data_Cere$Tree_label_name <- rownames(Phylo_Data_Cere)
+
+#Comparing the telencephalon surface area with the remaining endocast surface area using PGLS and the form argument specifying the species names as they match the Data_Telenset. This code yields the same results with and without the "form" argument, but it's probably better to run it with to avoid mistakes of row and tree tip mismatch.
+TeleEndoScale_gm_pgls <- gls( log(telenSA) ~ log(enminustelenSA), correlation = corBrownian(1,consensus_tree_telen, form=~Tree_label_name), data=Phylo_Data_Telen)
+
+#Comparing the telencephalon volume with the remaining brain volume using PGLS
+TeleBrainScale_gm_pgls <- gls( log(telenVOL) ~ log(brminustelenVOL), correlation = corBrownian(1,consensus_tree_telen, form = ~Tree_label_name), data=Phylo_Data_Telen)
+
+#Comparing the cerebellum surface area with the remaining endocast surface area using PGLS
+CereEndoScale_gm_pgls <- gls( log(cereSA) ~ log(enminuscereSA), correlation = corBrownian(1,consensus_tree_cere, form = ~Tree_label_name), data=Phylo_Data_Cere)
+
+#Comparing the cerebellum volume with the remaining brain volume using PGLS
+CereBrainScale_gm_pgls <- gls( log(cereVOL) ~ log(brminuscereVOL), correlation = corBrownian(1,consensus_tree_cere, form = ~Tree_label_name), data=Phylo_Data_Cere)
+
+
+#Comparing the telencephalon surface area with the telencephalon volume using PGLS
+Tele_gm_pgls <- gls( log(telenSA) ~ log(telenVOL), correlation = corBrownian(1,consensus_tree_telen, form = ~Tree_label_name), data=Phylo_Data_Telen)
+
+#Comparing the cerebellum surface area with the cerebellum volume using PGLS
+cere_gm_pgls <- gls( log(cereSA) ~ log(cereVOL), correlation = corBrownian(1,consensus_tree_cere, form = ~Tree_label_name), data=Phylo_Data_Cere)
+
+#Comparing the whole endocast surface area with the whole brain volume using PGLS
+EndoBrain_gm_pgls <- gls( log(endoSA) ~ log(brVOL_cere), correlation = corBrownian(1,consensus_tree_cere, form = ~Tree_label_name), data=Phylo_Data_Cere)
+
+```
+
+#LM analyses
+```{r}
+#Comparing the telencephalon surface area with the telencephalon volume using LM
+Tele_gm_lm <- lm( log(telenSA) ~ log(telenVOL), data=Data_raw)
+
+#Comparing the cerebellum surface area with the cerebellum volume using LM
+cere_gm_lm <- lm( log(cereSA) ~ log(cereVOL), data=Data_raw)
+
+#Comparing the whole endocast surface area with the whole brain volume using LM
+EndoBrain_gm_lm <- lm( log(endoSA) ~ log(brVOL_cere), data=Data_raw)
+
+#Comparing the telencephalon surface area with the remaining endocast surface area using LM
+TeleEndoScale_gm_lm <- lm( log(telenSA) ~ log(enminustelenSA), data=Data_raw)
+
+#Comparing the telencephalon volume with the remaining brain volume using LM
+TeleBrainScale_gm_lm <- lm( log(telenVOL) ~ log(brminustelenVOL), data=Data_raw)
+
+#Comparing the cerebellum surface area with the remaining endocast surface area using LM
+CereEndoScale_gm_lm <- lm( log(cereSA) ~ log(enminuscereSA), data=Data_raw)
+
+#Comparing the cerebellum volume with the remaining brain volume using LM
+CereBrainScale_gm_lm <- lm( log(cereVOL) ~ log(brminuscereVOL), data=Data_raw)
+
+```
+
+
+#Wald tests for isometry
+
+###TELENCEPHALON endocast vs brain
+```{r}
+#asking if an intercept or a slope is different to a particular hypothesized value. In this case, we wanted to know if a regression of surface ~ volume  is 0.67, which is the value for isometry between surfaces (square) and volume (cubed).
+
+
+#As far as I can see, the scaling is very close to isometry (which should be 0.67 as surface area scales at 2/3rds volume)
+
+
+#We also want to know if the scaling is different from 0.67 (surface should scale with volume at 0.67 in case of isometry)
+
+#We use the Wald test using the function linearHypothesis from the car package. In our case, we only have 2 coefficients so the hypothesis matrix is just two values; we are interested in the 2nd value, which is the slope coefficient, and so the hypothesis matrix is just 0 (intercept - not interested ), 1 (slope - what we want). 
+
+# rhs is the value we want to test against, i.e. given all the model output (e.g. standard error, sample size, etc), what's the probability of the rhs value to be significantly different from the coefficient value we've observed? 
+
+reg <- Tele_gm_lm
+coef(reg)
+
+# wald test for log(telenVOL) =0.67
+
+IsomTele_lm <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=0.67)
+
+#trying this for pgls:
+
+reg <- Tele_gm_pgls
+coef(reg)
+
+# wald test for log(telenVOL) =0.67
+
+IsomTele_pgls <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=0.67)
+
+
+#Wald test comparing the slopes of the PGLS with the LM
+
+#Naming the LM
+regLM <- summary(Tele_gm_lm)
+
+
+# wald test for slope
+TeleLMvsPGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regLM$coefficients[2,1])
+
+
+```
+
+###CEREBELLUM endocast vs brain
+```{r}
+reg <- cere_gm_lm
+coef(reg)
+
+
+# wald test for log(cereVOL) =0.67
+
+#original - what Vera had
+IsomCere_lm <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=0.67)
+
+
+
+
+#trying this for pgls:
+
+reg <- cere_gm_pgls
+coef(reg)
+
+# wald test for log(cereVOL) =0.67
+
+IsomCere_pgls <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=0.67)
+
+#Wald test comparing the slopes of the PGLS with the LM
+
+#Naming the LM
+reg <- cere_gm_pgls
+regLM <- summary(cere_gm_lm)
+
+
+# wald test for slope
+CereLMvsPGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regLM$coefficients[2,1])
+
+
+
+```
+
+###Whole endocast vs brain
+```{r}
+#Isometry test using the LM
+reg <- EndoBrain_gm_lm
+
+# wald test for slope
+IsomEndoBrain_lm <-linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=0.67)
+
+#trying this for pgls:
+
+reg <- EndoBrain_gm_pgls
+
+# wald test for log(cereVOL) =0.67
+
+IsomEndoBrain_pgls <-linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=0.67)
+
+#Wald test comparing the slopes of the PGLS with the LM
+
+#Naming the LM
+regLM <- summary(EndoBrain_gm_lm)
+
+# wald test for slope
+EndoBrainLMvsPGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regLM$coefficients[2,1])
+
+```
+
+
+###Determining if the LM slope and incercept of endocast scales is significantly different from the brain scaling using the Wald test
+###Telencephalon scaling
+```{r}
+#Naming the tele endo scale the "reg" for regression
+reg <- TeleEndoScale_gm_lm
+coef(reg)
+
+#Naming the tele brain scale the "regscale" for regression scale
+regscale <- summary(TeleBrainScale_gm_lm)
+
+# wald test for slope
+TeleScale_Slope_LM <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regscale$coefficients[2,1])
+
+
+#manually putting in the slope
+linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=1.07975)
+
+
+
+
+# wald test for intercept
+
+linearHypothesis(reg, hypothesis.matrix = c(1, 0), rhs=regscale$coefficients[1,1])
+#manually putting in the intercept
+linearHypothesis(reg, hypothesis.matrix = c(1, 0), rhs=-0.01392)
+##Gives the same result
+
+
+###trying this for pgls:
+
+reg <- TeleEndoScale_gm_pgls
+coef(reg)
+regscale <- summary(TeleBrainScale_gm_pgls)
+intercept <- coef(regscale)[1]
+slope <- coef(regscale)[2]
+
+# slope
+
+TeleScale_Slope_PGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=slope)
+
+#intercept
+
+linearHypothesis(reg, hypothesis.matrix = c(1, 0), rhs=intercept)
+
+
+#Wald test comparing the slopes of the PGLS with the LM
+#Endo scale
+#Naming the LM
+reg <- TeleEndoScale_gm_pgls
+regLM <- summary(TeleEndoScale_gm_lm)
+
+
+# wald test for slope
+TeleEndoScale_LMvsPGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regLM$coefficients[2,1])
+
+#Brain scale
+#Naming the LM
+reg <- TeleBrainScale_gm_pgls
+coef(reg)
+regLM <- summary(TeleBrainScale_gm_lm)
+
+# wald test for slope
+TeleBrainScale_LMvsPGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regLM$coefficients[2,1])
+
+
+```
+
+###Cerebellum scaling
+```{r}
+#Naming the cere endo scale the "reg" for regression
+reg <- CereEndoScale_gm_lm
+coef(reg)
+
+summary(CereEndoScale_gm_lm)
+
+#Naming the tele brain scale the "regscale" for regression scale
+regscale <- summary(CereBrainScale_gm_lm)
+
+
+# wald test for slope
+
+CereScale_Slope_LM <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regscale$coefficients[2,1])
+#manually putting in the slope
+linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=0.95464)
+
+# wald test for intercept
+
+linearHypothesis(reg, hypothesis.matrix = c(1, 0), rhs=regscale$coefficients[1,1])
+#manually putting in the intercept
+linearHypothesis(reg, hypothesis.matrix = c(1, 0), rhs=-1.66509)
+##Gives the same result
+
+
+###trying this for pgls:
+
+reg <- CereEndoScale_gm_pgls
+coef(reg)
+
+
+regscale <- CereBrainScale_gm_pgls
+intercept <- coef(regscale)[1]
+slope <- coef(regscale)[2]
+
+# slope
+
+CereScale_Slope_PGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=slope)
+
+#intercept
+
+linearHypothesis(reg, hypothesis.matrix = c(1, 0), rhs=intercept)
+
+#Wald test comparing the slopes of the PGLS with the LM
+#Endo scale
+#Naming the LM
+reg <- CereEndoScale_gm_pgls
+regLM <- summary(CereEndoScale_gm_lm)
+
+
+# wald test for slope
+CereEndoScale_LMvsPGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regLM$coefficients[2,1])
+
+#Brain scale
+#Naming the LM
+reg <- CereBrainScale_gm_pgls
+coef(reg)
+regLM <- summary(CereBrainScale_gm_lm)
+
+# wald test for slope
+CereBrainScale_LMvsPGLS <- linearHypothesis(reg, hypothesis.matrix = c(0, 1), rhs=regLM$coefficients[2,1])
+
+
+
+
+```
+
+#Exporting the LM results for isometry
+```{r}
+
+EndoBrain_sum <- summary(EndoBrain_gm_lm)
+TeleIso_sum <- summary(Tele_gm_lm)
+CereIso_sum <- summary(cere_gm_lm)
+
+
+#Set up a table with the relevant column names
+
+LM_results <- data.frame("Dep" = integer(0), "Pred" = integer(0), "p"= integer(0), "intercept" = integer(0), "r2" = integer(0),  "Slope" = integer(0), "Wald" = integer(0))
+
+
+LM_results [1,] <-   c( "Endo. SA", "Brain VOL", round(EndoBrain_sum$coefficients[2,4],2), round(EndoBrain_sum$coefficients[1,1],2), round(EndoBrain_sum$adj.r.squared,3), round(EndoBrain_sum$coefficients[2,1],2), round(IsomEndoBrain_lm[2,6],2))
+
+LM_results <-rbind (LM_results, c( "Tele. SA", "Tele. VOL", round(TeleIso_sum$coefficients[2,4],2), round(TeleIso_sum$coefficients[1,1],2), round(TeleIso_sum$adj.r.squared,3), round(TeleIso_sum$coefficients[2,1],2), round(IsomTele_lm[2,6],2)))
+
+LM_results <-rbind (LM_results, c( "Cere Endo Scale", "Cere Brain Scale", round(CereIso_sum$coefficients[2,4],2), round(CereIso_sum$coefficients[1,1],2), round(CereIso_sum$adj.r.squared,3), round(CereIso_sum$coefficients[2,1],2), round(IsomCere_lm[2,6],2)))
+
+write.csv(LM_results, file = "../Tables/LM_results.csv")
+
+
+```
+
+#Exporting the PGLS results for scaling
+```{r}
+
+
+#Set up a table with the relevant column names
+PGLS_results <- data.frame("Dep" = integer(0), "Pred"= integer(0), "t-value"= integer(0), "p-value"= integer(0), "Intercept"= integer(0), "Slope"= integer(0), "Wald"= integer(0))
+
+#Start it off with row 1 
+PGLS_results [1,] <-   c("Tele. SA.", "Endo. minus Tele", round(summary(TeleEndoScale_gm_pgls)$tTable[2,3:4],2), round(summary(TeleEndoScale_gm_pgls)$tTable[1,1],2),  round(summary(TeleEndoScale_gm_pgls)$tTable[2,1],2),  round(TeleScale_Slope_PGLS[2,3],2))
+
+#Then add as many rows with the same outputs as you like using rbind
+PGLS_results <- rbind (PGLS_results, c("Tele. VOL", "Brain minus Tele", round(summary(TeleBrainScale_gm_pgls)$tTable[2,3:4],2), round(summary(TeleBrainScale_gm_pgls)$tTable[1,1],2),
+round(summary(TeleBrainScale_gm_pgls)$tTable[2,1],2), "NA"))
+
+
+PGLS_results <- rbind (PGLS_results, c("Cere. SA", "Endo. minus Cere", round(summary(CereEndoScale_gm_pgls)$tTable[2,3:4],2), round(summary(CereEndoScale_gm_pgls)$tTable[1,1],2),
+                                       round(summary(CereEndoScale_gm_pgls)$tTable[2,1],2), round(CereScale_Slope_PGLS[2,3],2)))
+
+
+
+PGLS_results <- rbind (PGLS_results, c( "Cere. VOL","Brain minus Cere", round(summary(CereBrainScale_gm_pgls)$tTable[2,3:4],2), round(summary(CereBrainScale_gm_pgls)$tTable[1,1],2),
+                                        round(summary(CereBrainScale_gm_pgls)$tTable[2,1],2),"NA"))
+
+
+
+
+
+
+
+write.csv(PGLS_results, file = "../Tables/PGLS_scaling_output.csv")
+
+```
+
+#Supplementary
+#Exporting the PGLS results for direct comparisons
+```{r}
+#Set up a table with the relevant column names
+
+
+PGLS_results <- data.frame("Dep" = integer(0), "Pred"= integer(0), "t-value"= integer(0), "p-value"= integer(0), "Intercept"= integer(0), "Slope"= integer(0), "Wald Test"= integer(0))
+
+#Start it off with row 1 
+
+PGLS_results [1,] <-   c( "log Endo. SA", "log Brain VOL", (summary(EndoBrain_gm_pgls)$tTable[2,3:4]), (summary(EndoBrain_gm_pgls)$tTable[1,1]), (summary(EndoBrain_gm_pgls)$tTable[2,1]), (IsomEndoBrain_pgls[2,3]))
+
+#Then add as many rows with the same outputs as you like using rbind
+
+PGLS_results <- rbind (PGLS_results, c("log Tele. SA", "log Tele. VOL", (summary(Tele_gm_pgls)$tTable[2,3:4]), (summary(Tele_gm_pgls)$tTable[1,1]), (summary(Tele_gm_pgls)$tTable[2,1]), (IsomTele_pgls[2,3])))
+
+PGLS_results <- rbind (PGLS_results, c("log Cere. SA", "log Cere. VOL", (summary(cere_gm_pgls)$tTable[2,3:4]), (summary(cere_gm_pgls)$tTable[1,1]), (summary(cere_gm_pgls)$tTable[2,1]), (IsomCere_pgls[2,3])))
+
+write.csv(PGLS_results, file = "../Tables/PGLS_iso_output.csv")
+
+
+```
+
+#Exporting the Wald test results
+```{r}
+#Set up a table with the relevant column names
+
+Wald_results <- data.frame("Dep" = integer(0), "Pred" = integer(0), "Regression" = integer(0), "p"= integer(0))
+
+#Start it off with row 1 
+
+
+Wald_results [1,] <-   c( "Cere Endo Scale", "Cere Brain Scale", "PGLS", (CereScale_Slope_PGLS[2,3]))
+
+Wald_results <-rbind (Wald_results, c( "Cere Endo Scale", "Cere Brain Scale", "LM", (CereScale_Slope_LM[2,6])))
+
+Wald_results <-rbind (Wald_results, c( "Tele Endo Scale", "Tele Brain Scale", "PGLS", (TeleScale_Slope_PGLS[2,3])))
+
+Wald_results <-rbind (Wald_results, c( "Tele Endo Scale", "Tele Brain Scale", "LM", (TeleScale_Slope_LM[2,6])))
+
+Wald_results <-rbind (Wald_results, c( "Endo vs Brain", "0.67", "PGLS", (IsomEndoBrain_pgls[2,3])))
+
+Wald_results <-rbind (Wald_results, c( "Endo vs Brain", "0.67", "LM", (IsomEndoBrain_lm[2,6])))
+
+Wald_results <-rbind (Wald_results, c( "TeleSA vs TeleVOL", "0.67", "PGLS", (IsomTele_pgls[2,3])))
+
+Wald_results <-rbind (Wald_results, c( "TeleSA vs TeleVOL", "0.67", "LM", (IsomTele_lm[2,6])))
+
+Wald_results <-rbind (Wald_results, c( "CereSA vs CereVOL", "0.67", "PGLS", (IsomCere_pgls[2,3])))
+
+Wald_results <-rbind (Wald_results, c( "CereSA vs CereVOL", "0.67", "LM", (IsomCere_lm[2,6])))
+
+Wald_results <-rbind (Wald_results, c( "LM TeleEndoScale", "PGLS TeleEndoScale", "LM vs PGLS", (TeleEndoScale_LMvsPGLS[2,3])))
+
+Wald_results <-rbind (Wald_results, c( "LM TeleBrainScale", "PGLS TeleBrainScale", "LM vs PGLS", (TeleBrainScale_LMvsPGLS[2,3])))
+
+Wald_results <-rbind (Wald_results, c( "LM CereEndoScale", "PGLS CereEndoScale", "LM vs PGLS", (CereEndoScale_LMvsPGLS[2,3])))
+
+Wald_results <-rbind (Wald_results, c( "LM CereBrainScale", "PGLS CereBrainScale", "LM vs PGLS", (CereBrainScale_LMvsPGLS[2,3])))
+
+
+write.csv(Wald_results, file = "../Tables/Wald_output.csv")
+
+```
